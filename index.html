@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Music Player</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="player-container">
+        <div class="player-background"></div>
+
+        <div class="player-card">
+            
+            <header class="player-header">
+                <i class="material-icons">music_note</i>
+                <h2>My Custom Playlist</h2>
+            </header>
+            
+            <div class="current-song-info">
+                <div class="album-art-box">
+                    <img id="album-art" src="https://picsum.photos/200/200?random=1" alt="Album Art">
+                    <div class="playing-indicator"></div>
+                </div>
+                <h3 id="current-title">Song Title</h3>
+                <p id="current-artist">Artist Name</p>
+            </div>
+
+            <div class="progress-area">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="song-times">
+                    <span id="current-time">0:00</span>
+                    <span id="total-duration">3:00</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="prev-btn" class="control-btn"><i class="material-icons">skip_previous</i></button>
+                <button id="play-pause-btn" class="control-btn main-control">
+                    <i class="material-icons" id="play-pause-icon">play_arrow</i>
+                </button>
+                <button id="next-btn" class="control-btn"><i class="material-icons">skip_next</i></button>
+            </div>
+
+            <div class="volume-control-area">
+                <i class="material-icons volume-icon">volume_up</i>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.7">
+            </div>
+
+        </div>
+
+        <div class="playlist-section">
+            <h3>Playlist <span id="song-count">(3 songs)</span></h3>
+            <ul id="playlist">
+                </ul>
+        </div>
+        
+    </div>
+
+    <audio id="audio-player"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
